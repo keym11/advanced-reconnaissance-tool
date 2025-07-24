@@ -1,0 +1,348 @@
+
+# Advanced Reconnaissance Tool - .gitignore
+
+# ============================================================================
+# RECONNAISSANCE OUTPUT FILES
+# ============================================================================
+
+# Scan result directories (timestamped output)
+recon_*_*/
+results_*/
+output_*/
+scan_*/
+
+# Individual result files
+*.txt
+*.xml
+*.json
+*.csv
+*.html
+
+# Log files
+*.log
+recon.log
+scan.log
+debug.log
+error.log
+
+# Temporary scan files
+temp_*
+tmp_*
+.temp_*
+.tmp_*
+
+# ============================================================================
+# SYSTEM AND EDITOR FILES
+# ============================================================================
+
+# MacOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Linux system files
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# ============================================================================
+# EDITOR AND IDE FILES
+# ============================================================================
+
+# Vim
+*.swp
+*.swo
+*~
+.*.sw[a-p]
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list/
+tramp
+.\#*
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# ============================================================================
+# TEMPORARY AND BACKUP FILES
+# ============================================================================
+
+# Backup files
+*.bak
+*.backup
+*.orig
+*.save
+*.old
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# Archive files (unless specifically needed)
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ============================================================================
+# SECURITY AND SENSITIVE DATA
+# ============================================================================
+
+# API keys and configuration
+.env
+.env.local
+.env.*.local
+config/secrets.*
+secrets.*
+api_keys.*
+credentials.*
+
+# SSH keys and certificates
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# ============================================================================
+# DEVELOPMENT AND BUILD FILES
+# ============================================================================
+
+# Node.js (if any JavaScript tools are added)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Python (if any Python tools are added)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Go (for Go-based tools like subfinder, amass)
+vendor/
+*.test
+*.prof
+
+# ============================================================================
+# WORDLISTS AND DICTIONARIES
+# ============================================================================
+
+# Large wordlist files (reference them instead of including)
+wordlists/
+dictionaries/
+*.wordlist
+*.dict
+
+# SecLists (should be installed separately)
+SecLists/
+
+# Custom wordlists (keep small ones, ignore large ones)
+*-large.txt
+*-huge.txt
+*-massive.txt
+
+# ============================================================================
+# DOCUMENTATION BUILDS
+# ============================================================================
+
+# Generated documentation
+docs/_build/
+docs/build/
+site/
+
+# PDF documentation
+*.pdf
+
+# ============================================================================
+# TESTING AND DEBUGGING
+# ============================================================================
+
+# Test output
+test_results/
+test_output/
+testing/
+tests/output/
+
+# Debug files
+debug/
+*.debug
+core
+core.*
+
+# Coverage reports
+coverage/
+.coverage
+.coverage.*
+htmlcov/
+
+# ============================================================================
+# RECONNAISSANCE TOOL SPECIFIC
+# ============================================================================
+
+# Nmap output formats (except sample ones in docs)
+*.nmap
+*.gnmap
+*.xml
+nmap_*
+
+# Subdomain enumeration results
+subdomains.txt
+all_subdomains.txt
+*_subdomains.txt
+
+# Web enumeration results
+directories.txt
+web_content.txt
+*_directories.txt
+
+# DNS enumeration results
+dns_*.txt
+zone_*.txt
+
+# SSL/TLS analysis results
+ssl_*.txt
+tls_*.txt
+cert_*.txt
+
+# WHOIS results
+whois_*.txt
+
+# Vulnerability scan results
+vulns_*.txt
+nikto_*.txt
+*_vulns.txt
+
+# Masscan results
+masscan_*.txt
+*.masscan
+
+# ============================================================================
+# CUSTOM CONFIGURATIONS
+# ============================================================================
+
+# User-specific configurations
+.recon_config
+.user_config
+user_settings.*
+custom_wordlists/
+
+# Local environment overrides
+.env.local
+config.local.*
+
+# Personal notes and documentation
+NOTES.md
+TODO.md
+personal_*
+
+# ============================================================================
+# CACHE AND RUNTIME
+# ============================================================================
+
+# Tool caches
+.cache/
+cache/
+.subfinder/
+.amass/
+
+# Runtime files
+*.pid
+*.sock
+.running
+
+# Lock files
+*.lock
+.lock
+
+# ============================================================================
+# EXCLUDE PATTERNS
+# ============================================================================
+
+# But DO include these important files (override above patterns)
+!README.md
+!CHANGELOG.md
+!CONTRIBUTING.md
+!LICENSE
+!DISCLAIMER.md
+!examples/sample_output/*.txt
+!docs/*.md
+!wordlists/common.txt
+!.gitignore
+!.github/
+
+# Include essential documentation images
+!docs/images/*.png
+!docs/images/*.jpg
+!docs/screenshots/*.png
+
+# Include example configurations
+!examples/configs/*.conf
+!examples/configs/*.example
