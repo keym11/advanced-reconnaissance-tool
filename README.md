@@ -239,7 +239,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 *Built with ❤️ for the cybersecurity education community*
 
 **Author**: saud and rashid  
-**Contact**: [saud69262@gmail.com](mailto:saud69262@gmail.com)  
+**Contact**: [saud69262@gmail.com](mailto:saud69262@gmail.com)
+**Contact**: [khalilrashid579@gmail.com](mailto:khalilrashid579@gmail.com)
 **GitHub**: [@keym11](https://github.com/keym11)
 
 </div>
